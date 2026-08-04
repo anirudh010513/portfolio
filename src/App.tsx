@@ -1,16 +1,30 @@
-import { motion } from 'framer-motion'
+import { Navbar } from './components/Navbar'
+import { Hero } from './components/Hero'
+import { About } from './components/About'
+import { Education } from './components/Education'
+import { Experience } from './components/Experience'
+import { Skills } from './components/Skills'
+import { Projects } from './components/Projects'
+import { Certifications } from './components/Certifications'
+import { Contact } from './components/Contact'
+import { Footer } from './components/Footer'
 
 function App() {
   return (
-    <main className="flex min-h-screen items-center justify-center bg-slate-950 text-white">
-      <motion.div
-        initial={{ opacity: 0, y: 12 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-      >
-        <h1 className="text-3xl font-semibold">Portfolio scaffold ready</h1>
-      </motion.div>
-    </main>
+    <div id="top" className="relative overflow-x-clip">
+      <Navbar />
+      <main>
+        <Hero />
+        <About />
+        <Education />
+        <Experience />
+        <Skills />
+        <Projects />
+        <Certifications />
+        <Contact />
+      </main>
+      <Footer />
+    </div>
   )
 }
 

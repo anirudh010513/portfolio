@@ -9,10 +9,10 @@ export function Footer() {
     <footer className="border-t border-zinc-200/70 py-10 dark:border-white/10">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-5 sm:px-8 md:flex-row">
         <div className="text-center md:text-left">
-          <p className="text-sm font-semibold text-zinc-900 dark:text-white">
+          <p className="font-display text-sm font-semibold text-zinc-900 dark:text-white">
             {profile.name}
           </p>
-          <p className="mt-1 text-xs text-zinc-500 dark:text-zinc-500">
+          <p className="mt-1 text-xs text-zinc-500 dark:text-zinc-400">
             © {year} · Built with React, TypeScript, Tailwind CSS &amp; Framer Motion
           </p>
         </div>

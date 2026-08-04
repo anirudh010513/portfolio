@@ -23,11 +23,21 @@ export function Navbar() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
+  // Close the mobile menu on Escape.
+  useEffect(() => {
+    if (!open) return
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setOpen(false)
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [open])
+
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
         scrolled || open
-          ? 'border-b border-zinc-200/70 bg-white/70 backdrop-blur-xl dark:border-white/10 dark:bg-[#0a0a10]/70'
+          ? 'border-b border-zinc-200/70 bg-white/75 backdrop-blur-xl dark:border-white/10 dark:bg-[#0a0a10]/75'
           : 'border-b border-transparent bg-transparent'
       }`}
     >
@@ -40,7 +50,7 @@ export function Navbar() {
           <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 via-sky-400 to-cyan-300 text-sm font-bold text-white shadow-md shadow-indigo-500/20 transition-transform duration-300 group-hover:scale-105">
             AB
           </span>
-          <span className="hidden text-sm font-semibold tracking-tight text-zinc-900 dark:text-white sm:block">
+          <span className="hidden font-display text-[15px] font-semibold tracking-tight text-zinc-900 dark:text-white sm:block">
             Anirudh Baradwaj
           </span>
         </a>
@@ -50,7 +60,7 @@ export function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="rounded-full px-3.5 py-2 text-sm font-medium text-zinc-600 transition-colors duration-200 hover:bg-zinc-900/5 hover:text-zinc-900 dark:text-zinc-400 dark:hover:bg-white/5 dark:hover:text-white"
+              className="relative rounded-full px-3.5 py-2 text-sm font-medium text-zinc-600 transition-colors duration-200 after:absolute after:inset-x-3.5 after:-bottom-px after:h-px after:origin-left after:scale-x-0 after:bg-gradient-to-r after:from-indigo-500 after:to-cyan-400 after:transition-transform after:duration-300 hover:text-zinc-900 hover:after:scale-x-100 dark:text-zinc-400 dark:hover:text-white"
             >
               {link.label}
             </a>
@@ -66,6 +76,7 @@ export function Navbar() {
             onClick={() => setOpen((v) => !v)}
             aria-label={open ? 'Close menu' : 'Open menu'}
             aria-expanded={open}
+            aria-controls="mobile-menu"
             className="flex h-10 w-10 items-center justify-center rounded-full text-zinc-700 transition-colors hover:bg-zinc-900/5 dark:text-zinc-300 dark:hover:bg-white/5 md:hidden"
           >
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -76,6 +87,7 @@ export function Navbar() {
       <AnimatePresence>
         {open ? (
           <motion.nav
+            id="mobile-menu"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}

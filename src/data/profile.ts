@@ -4,13 +4,13 @@ export const profile = {
     'Computer Science Engineering Student · Full Stack Developer · AI & Machine Learning Enthusiast',
   location: 'Delhi, India',
   email: 'anirudhbaradwaj2005@gmail.com',
-  phone: '+91 6303305901',
-  phoneHref: '+916303305901',
+  phone: '+91 7827835733',
+  phoneHref: '+917827835733',
   github: 'https://github.com/anirudh010513',
   githubHandle: 'anirudh010513',
   siteUrl: 'https://anirudh010513.github.io/portfolio/',
   about: [
-    'I am a 21-year-old Computer Science Engineer at VIT-AP University, passionate about artificial intelligence, full-stack development, and building scalable software systems. I enjoy transforming ideas into impactful real-world applications through clean engineering practices, modern technologies, and continuous learning. I am always eager to take on challenging projects that push my technical skills while creating meaningful solutions.',
+    'A 22-year-old Computer Science Engineering student from Vellore Institute of Technology (VIT-AP Campus) with a strong interest in artificial intelligence, full-stack development, and building scalable software systems. Passionate about transforming ideas into impactful real-world applications through clean engineering practices, modern technologies, and continuous learning. Eager to take on challenging projects that strengthen technical expertise while delivering innovative and meaningful solutions.',
   ],
 } as const
 

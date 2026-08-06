@@ -10,7 +10,7 @@ export const profile = {
   githubHandle: 'anirudh010513',
   siteUrl: 'https://anirudh010513.github.io/portfolio/',
   about: [
-    'I am a 21-year-old Computer Science Engineer at VIT-AP University with a strong passion for artificial intelligence, full-stack development, and building scalable software solutions. I enjoy transforming ideas into real-world applications through clean engineering practices, modern technologies, and continuous learning.',
+    'I am a 21-year-old Computer Science Engineer at VIT-AP University, passionate about artificial intelligence, full-stack development, and building scalable software systems. I enjoy transforming ideas into impactful real-world applications through clean engineering practices, modern technologies, and continuous learning. I am always eager to take on challenging projects that push my technical skills while creating meaningful solutions.',
   ],
 } as const
 

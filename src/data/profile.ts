@@ -24,8 +24,8 @@ export interface EducationItem {
 export const education: EducationItem[] = [
   {
     title: 'Bachelor of Technology in Computer Science Engineering',
-    school: 'Vellore Institute of Technology',
-    badge: 'CGPA: 8.0',
+    school: 'Vellore Institute of Technology – AP',
+    badge: 'Expected CGPA: 7.2',
   },
   {
     title: 'Senior Secondary Education (Class XII)',
@@ -76,7 +76,7 @@ export interface SkillGroup {
 
 export const skillGroups: SkillGroup[] = [
   {
-    title: 'Languages',
+    title: 'Programming Languages',
     skills: ['Java', 'Python', 'TypeScript', 'JavaScript', 'SQL', 'HTML', 'CSS'],
   },
   {
@@ -102,6 +102,10 @@ export const skillGroups: SkillGroup[] = [
   {
     title: 'Soft Skills',
     skills: ['Leadership', 'Teamwork', 'Communication', 'Critical Thinking', 'Time Management'],
+  },
+  {
+    title: 'Languages',
+    skills: ['English', 'Hindi', 'Tamil', 'Malayalam'],
   },
 ]
 

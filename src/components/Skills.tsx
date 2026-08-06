@@ -2,6 +2,7 @@ import {
   BrainCircuit,
   Code2,
   Database,
+  Languages,
   LayoutTemplate,
   Server,
   Sparkles,
@@ -15,13 +16,14 @@ import { Section } from './Section'
 import { Spotlight } from './Spotlight'
 
 const icons: Record<string, LucideIcon> = {
-  Languages: Code2,
+  'Programming Languages': Code2,
   Frontend: LayoutTemplate,
   Backend: Server,
   Databases: Database,
   'AI / Machine Learning': BrainCircuit,
   Tools: Wrench,
   'Soft Skills': Users,
+  Languages,
 }
 
 export function Skills() {
